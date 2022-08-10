@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Order Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    
+    <style>
+        @media (min-width: 1025px) {
+.h-custom {
+height: 100vh !important;
+}
+}
+
+.horizontal-timeline .items {
+border-top: 2px solid #ddd;
+}
+
+.horizontal-timeline .items .items-list {
+position: relative;
+margin-right: 0;
+}
+
+.horizontal-timeline .items .items-list:before {
+content: "";
+position: absolute;
+height: 8px;
+width: 8px;
+border-radius: 50%;
+background-color: #ddd;
+top: 0;
+margin-top: -5px;
+}
+
+.horizontal-timeline .items .items-list {
+padding-top: 15px;
+}
+    </style>
+</head>
+  <body onload="orderreciept()"  >
+    <form action="/payment" method="get">
+    <section class="h-100 h-custom" style="background-color: #eee;">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-8 col-xl-6">
+              <div class="card border-top border-bottom border-3" style="border-color:black !important;">
+                <div class="card-body p-5">
+      
+                  <p class="lead fw-bold mb-5" style="color: black;">coffee Purchase Reciept</p>
+      
+                  <div class="row">
+                    <div class="col mb-3">
+                      <p class="small text-muted mb-1">Date</p>
+                      <p>10 April 2021</p>
+                    </div>
+                    <div class="col mb-3">
+                      <p class="small text-muted mb-1">Order No.</p>
+                      <p>012j1gvs356c</p>
+                    </div>
+                  </div>
+      
+                  <div class="mx-n5 px-5 py-4" style="background-color: #f2f2f2;">
+                    <div class="row">
+                      <div class="col-md-8 col-lg-9">
+                        <div id="productName"></div>
+                      </div>
+                      <div class="col-md-4 col-lg-3">
+                        <div id="productPrice"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-8 col-lg-9">
+                        <div><span>Quantity</span></div>
+                      </div>
+                      <div class="col-md-4 col-lg-3">
+                        <div id="productCount"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-8 col-lg-9">
+                        <p class="mb-0">Shipping</p>
+                      </div>
+                      <div class="col-md-4 col-lg-3">
+                        <p class="mb-0">₹33.00</p>
+                      </div>
+                      
+                    </div>
+                  </div>
+      
+                  <div class="row my-4">
+                    <div class="col-md-4 offset-md-8 col-lg-3 offset-lg-9">
+                      <!-- <p class="lead fw-bold mb-0" style="color: #f37a27;" id="totalPrice">₹192.00</p> -->
+                      <button type="submit" class="btn btn-primary" id="totalPrice" style="width: 117px;">159</button>
+                    </div>
+                  </div>
+      
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </form>
+    <script src="public/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  </body>
+</html>
